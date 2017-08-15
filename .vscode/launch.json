@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "runtimeExecutable":"/home/fionera/Software/Chrome/google-chrome",
+      "runtimeArgs": [
+        "--remote-debugging-port=9222"
+      ],
+      "sourceMaps": true,
+      "url": "http://localhost:8080/",
+      "webRoot": "${workspaceRoot}"
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Attach to Chrome",
+      "port": 9222,
+      "sourceMaps": true,
+      "webRoot": "${workspaceRoot}"
+    }
+  ]
+}
