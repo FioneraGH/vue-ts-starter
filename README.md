@@ -1,1 +1,1 @@
-# vue2-vux2-demo
+# vue-ts-starter
