@@ -4,16 +4,22 @@
 
 <template>
   <div>
-    <span @click="test">Home</span>
+    <button @click="test" >Home</button>
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  components: {},
   methods: {
     test() {
-      console.log(undefined)
+      window.alert('hello')
     }
+  },
+  mounted() {
+    console.log('mounted')
   }
-}
+})
 </script>

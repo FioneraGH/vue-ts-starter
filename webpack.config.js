@@ -38,15 +38,16 @@ function getBaseConfig() {
     },
     module: {
       rules: [
+        // disable eslint
         // {
-        //   test: /\.vue$/,
+        //   test: /\.(js|vue)$/,
         //   loader: 'eslint-loader',
         //   enforce: 'pre',
         //   exclude: /node_modules/
         // },
         {
-          test: /\.js$/,
-          loader: 'eslint-loader',
+          test: /\.ts$/,
+          loader: 'tslint-loader',
           enforce: 'pre',
           exclude: /node_modules/
         },

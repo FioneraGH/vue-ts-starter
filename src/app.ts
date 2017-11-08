@@ -21,10 +21,10 @@ store.registerModule('vux', {
     direction: 'forword'
   },
   mutations: {
-    updateLoadingStatus(state, payload) {
+    updateLoadingStatus (state, payload) {
       state.isLoading = payload.isLoading
     },
-    updateDirection(state, payload) {
+    updateDirection (state, payload) {
       state.direction = payload.direction
     }
   },
@@ -37,7 +37,8 @@ sync(store, router)
 
 const history = window.sessionStorage
 history.clear()
-let historyCount: number = <number><any>history.getItem('history_count') * 1 || 2
+let historyCount: number =
+  (history.getItem('history_count') as any as number) * 1 || 2
 history.setItem('/', String(0))
 history.setItem('/demo', String(1))
 history.setItem('/person', String(2))

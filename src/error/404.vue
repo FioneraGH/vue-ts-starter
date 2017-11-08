@@ -4,12 +4,13 @@
 
 <template>
   <div>
-    404
+    <span>404</span>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+
 export default Vue.extend({
   components: {
   }
