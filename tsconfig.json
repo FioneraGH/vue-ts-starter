@@ -1,20 +1,19 @@
 {
   "compilerOptions": {
-    "outDir": "./built/",
-    "strict": true,
     "target": "es5",
-    "module": "es2015",
-    "moduleResolution": "node",
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
+    "module": "commonjs",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "outDir": "dist",
     "lib": [
-      "dom",
       "es5",
-      "es2015.promise"
-    ]
-  },
-  "include": [
-    "./src/**/*"
-  ]
+      "es2015.collection",
+      "es2015.promise",
+      "dom",
+      "es2016.array.include"
+    ],
+    "allowJs": true
+  }
 }

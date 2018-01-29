@@ -1,13 +1,3 @@
-// You can install more packages below to config more as you like:
-// eslint
-// babel-eslint
-// eslint-config-standard
-// eslint-loader
-// eslint-plugin-html
-// eslint-plugin-promise
-// eslint-plugin-standard
-// postcss-cssnext
-
 const path = require('path')
 const webpack = require('webpack')
 const utils = require('./utils')
@@ -120,9 +110,5 @@ function obj2string(o) {
 }
 
 console.log('The final configuration is:\n\n' + obj2string(webConfig.module) + '\n\nConfiguration end.\n')
-
-// const weexConfig = getBaseConfig()
-// weexConfig.output.filename = '[name].weex.js'
-// weexConfig.module.rules[3].use.push('weex-loader')
 
 module.exports = [webConfig]

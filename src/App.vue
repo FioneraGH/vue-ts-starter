@@ -1,6 +1,6 @@
-<style lang="less">
+<style>
 body {
-  background-color: lightgreen;
+  background-color: lightblue;
   overflow-x: hidden;
 }
 </style>

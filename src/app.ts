@@ -4,7 +4,6 @@ import { sync } from 'vuex-router-sync'
 import router from './router'
 import App from './App.vue'
 
-require('es6-promise').polyfill()
 require('fastclick').attach(document.body)
 
 Vue.use(Vuex)
@@ -37,11 +36,8 @@ sync(store, router)
 
 const history = window.sessionStorage
 history.clear()
-let historyCount: number =
-  (history.getItem('history_count') as any as number) * 1 || 2
+let historyCount: number = (history.getItem('history_count') as any as number) * 1 || 2
 history.setItem('/', String(0))
-history.setItem('/demo', String(1))
-history.setItem('/person', String(2))
 
 router.beforeEach((to, from, next) => {
   store.commit('updateLoadingStatus', { isLoading: true })

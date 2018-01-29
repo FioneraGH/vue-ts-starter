@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Error404 from './error/404.vue'
+
+import Home from './pages/Home.vue'
+const Error404 = () => import('./error/404.vue')
 
 Vue.use(Router)
 
@@ -9,7 +11,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: require('./pages/Home.vue').default,
+      component: Home,
       meta: {
         title: '主页'
       }

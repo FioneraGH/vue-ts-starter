@@ -4,8 +4,6 @@
     "require": true
   },
   "rules": {
-    // for <style></style> <template></template> maybe treated as blank lines,
-    // set false if it occured.
     "no-consecutive-blank-lines": true
   }
 }
