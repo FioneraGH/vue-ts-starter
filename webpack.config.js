@@ -6,15 +6,18 @@ const vueLoaderConfig = require('./vue-loader.conf')
 const bannerPlugin = new webpack.BannerPlugin(
   '// { "framework": "Vue" }\n'
 )
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
+process.env.NODE_ENV = 'develpment'
 
 function getBaseConfig() {
   return {
     // devtool: '#cheap-module-eval-source-map',
     devtool: '#source-map',
     entry: {
-      app: path.resolve('./src/app.ts')
+      app: [path.resolve('./src/app.ts')]
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -73,7 +76,15 @@ function getBaseConfig() {
         filename: 'index.html',
         template: 'src/index.html',
         inject: true
-      })]
+      }),
+      new CopyWebpackPlugin([
+        {
+          from: './src/sw.js',
+          to: 'sw.js',
+          ignore: ['.*']
+        },
+      ])
+    ],
   }
 }
 
